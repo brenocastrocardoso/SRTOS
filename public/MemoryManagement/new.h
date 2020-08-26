@@ -1,0 +1,19 @@
+/*
+ * new
+ *
+ *  Created on: 1 Jan 2011
+ *      Author: Andy Brown
+ */
+
+#ifndef __1F3E89E5_F35D_4f8d_A849_9A3416814905
+#define __1F3E89E5_F35D_4f8d_A849_9A3416814905
+
+
+#include <stdlib.h>
+
+void *operator new(size_t size_);
+void* operator new(size_t size_,void *ptr_) noexcept;
+void operator delete(void *ptr_) noexcept;
+
+
+#endif
