@@ -21,6 +21,8 @@ Feel free to use, give feedback or help on the development.
   - Port Scheduler to ARM based boards
   - Good documentation
   - Communication protocols support
+  - Profiling
+  - Examples
 
 ## Notes
   - I'm currently developing that in an Arduino Uno and the driver implementations on that is direct based on Arduino functions
