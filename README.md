@@ -8,9 +8,6 @@ Feel free to use, give feedback or help on the development.
   Version: 0.1.0  
   State: Under Development
 
-## Design principles:
- - Configuration is good if it is an option
-
 ## Features Implemented
  - Scheduler : It is implemented an fixed priority Scheduler
  - Time support: There are Timer, Alarm, Chronometer, RTC and Epoch Date support
