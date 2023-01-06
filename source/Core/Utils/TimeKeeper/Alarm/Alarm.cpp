@@ -5,10 +5,10 @@
  *      Author: breno
  */
 
-#include <Utils/TimeKeeper/Alarm.h>
-#include <Utils/TimeKeeper/Timer.h>
 #include <MemoryManagement/StaticAllocator.h>
 #include <Utils/TimeKeeper/Alarm/AlarmManager.h>
+#include <Utils/TimeKeeper/Alarm.h>
+#include <Utils/TimeKeeper/Timer.h>
 
 
 Alarm::Alarm(Microseconds toCount, Handler alarmHandler, void* paramPointer) : Timer(toCount), _paramPointer(paramPointer), _handler(alarmHandler)

@@ -8,8 +8,8 @@
 #ifndef _DATATIME_H_
 #define _DATATIME_H_
 
-#include <RTOS.h>
 #include <Kernel/Kernel.h>
+#include <RTOS.h>
 
 class DateTime_Commun
 {
@@ -106,11 +106,12 @@ public:
 };
 
 
-class DateTime : DateTime_Commun
+class DateTime : public DateTime_Commun
 {
     static constexpr WEEKDAY firstDayWeekday = THURSDAY;
     static constexpr uint16 fristYear = 1970;
 
+public:
     uint8 second;
     uint8 minute;
     uint8 hour;
@@ -118,7 +119,15 @@ class DateTime : DateTime_Commun
     MONTH month;
     uint16 year;
     WEEKDAY weekday;
-public:
+
+    
+    DateTime(uint16 year, MONTH month, uint8 day, uint8 hour, uint8 minute, uint8 second)
+    : year(year), month(month), day(day), hour(hour), minute(minute), second(second) 
+    {
+        weekday = dayOfWeek(getTimestamp());
+    }
+
+
     DateTime(Timestamp timestamp)
     {
 
@@ -227,8 +236,19 @@ public:
     virtual ~Minute(){}
 };
 
+class Second
+{
+public:
+    virtual void addSecond(void) = 0;
+    virtual void subSecond(void) = 0;
 
-class Timepoint : public DateTime_Commun, public Day, public Hour, public Minute
+    Second& operator++(void){addSecond(); return *this;}
+    Second& operator--(void){subSecond(); return *this;}
+    virtual ~Second(){}
+};
+
+
+class Timepoint : public DateTime_Commun, public Day, public Hour, public Minute, public Second
 {
     typedef uint32 TimestampType;
 private:
@@ -253,6 +273,7 @@ public:
     Minute& Minute(void){return *this;}
     Hour& Hour(void){return *this;}
     Day& Day(void){return *this;}
+    Second& Second(void){return *this;}
 
     DateTime dateTime(void){ return _timestamp;}
 
@@ -264,6 +285,9 @@ public:
 
     virtual void addMinute(void){ _timestamp += secondsInAMinute; }
     virtual void subMinute(void){ _timestamp -= secondsInAMinute; }
+
+    virtual void addSecond(void){ _timestamp += 1; }
+    virtual void subSecond(void){ _timestamp -= 1; }
 
     Timepoint& operator++(void){++_timestamp; return *this;}
     Timepoint& operator--(void){--_timestamp; return *this;}

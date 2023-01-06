@@ -8,9 +8,9 @@
 #ifndef _MEMORYMANAGEMENT_LIST_
 #define _MEMORYMANAGEMENT_LIST_
 
-#include <RTOSCodeStyle.h>
-#include <MemoryManagement/StaticAllocator.h>
 #include <MemoryManagement/new.h>
+#include <MemoryManagement/StaticAllocator.h>
+#include <RTOSCodeStyle.h>
 
 namespace RTOS
 {

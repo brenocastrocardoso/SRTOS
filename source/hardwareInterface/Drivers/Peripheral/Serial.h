@@ -8,13 +8,11 @@
 #ifndef DRIVERS_SERIAL_H_
 #define DRIVERS_SERIAL_H_
 
-#include <RTOS.h>
-
-#include <Utils/Buffer.h>
-#include <IO/OStreamEngine.h>
-#include <Hal/Peripheral/SerialDefs.h>
-
 #include <Arduino.h>
+#include <Hal/Peripheral/SerialDefs.h>
+#include <IO/OStreamEngine.h>
+#include <RTOS.h>
+#include <Utils/Buffer.h>
 
 namespace DRIVERS
 {

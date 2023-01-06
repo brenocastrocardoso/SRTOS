@@ -9,10 +9,11 @@
 #define _SCHEDULLER_PERIODICTHREAD_H_
 
 #include <Kernel/Thread.h>
+#include <Kernel/Scheduller/Scheduller.h>
 
 namespace RTOS
 {
-	class PeriodicThread : public Thread<200>
+	class PeriodicThread : public Thread<500>
 	{
 	public:
 		typedef Alarm::Microseconds Microseconds;

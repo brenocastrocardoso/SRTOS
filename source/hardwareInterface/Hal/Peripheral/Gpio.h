@@ -6,7 +6,7 @@
 #define _HAL_GPIO_H
 
 #include <Drivers/Peripheral/Gpio.h>
-#include "GpioDefs.h"
+#include <Hal/Peripheral/GpioDefs.h>
 
 namespace HAL
 {

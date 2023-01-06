@@ -8,10 +8,9 @@
 #ifndef APPLICATION_DEBUG_H_
 #define APPLICATION_DEBUG_H_
 
-#include <RTOS.h>
-
 #include <Kernel/Kernel.h>
 #include <Kernel/Traits.h>
+#include <RTOS.h>
 
 
 static const char DEBUG_HEADER[] 	= {"DEBUG: "};

@@ -14,13 +14,13 @@
 
 namespace RTOS
 {
-	Kernel::KernelEEprom& UFat = *(Kernel::UFat);
-	Kernel::KernelOstream& cout = Kernel::cout;
+	extern Kernel::KernelEEprom& UFat;
+	extern Kernel::KernelOstream& cout;
 
-	const STREAM::SPECIAL_CHARACTHERES& endl = STREAM::endl;
-	const STREAM::SPECIAL_CHARACTHERES& tab = STREAM::tab;
-	const STREAM::SPECIAL_CHARACTHERES& newline = STREAM::newline;
-	const STREAM::SPECIAL_CHARACTHERES& hex = STREAM::hex;
+	extern const STREAM::SPECIAL_CHARACTHERES& endl;
+	extern const STREAM::SPECIAL_CHARACTHERES& tab;
+	extern const STREAM::SPECIAL_CHARACTHERES& newline;
+	extern const STREAM::SPECIAL_CHARACTHERES& hex;
 };
 
 #endif /* RTOS_PUBLIC_H_ */

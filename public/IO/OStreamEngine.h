@@ -10,7 +10,6 @@
 
 #include <RTOSCodeStyle.h>
 #include <Utils/Buffer.h>
-
 #include STRING_INCLUDE
 
 //namespace RTOS

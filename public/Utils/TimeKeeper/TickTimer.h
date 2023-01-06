@@ -8,8 +8,8 @@
 #ifndef RTOS_PUBLIC_UTILS_TIMEKEEPER_TICKTIMER_H_
 #define RTOS_PUBLIC_UTILS_TIMEKEEPER_TICKTIMER_H_
 
-#include "../../../public/Utils/TimeKeeper/SystemTick.h"
-#include "../../../public/Utils/TimeKeeper/TickChronometer.h"
+#include <Utils/TimeKeeper/SystemTick.h>
+#include <Utils/TimeKeeper/TickChronometer.h>
 
 class TickTimer : public TickChronometer
 {

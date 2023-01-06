@@ -8,9 +8,9 @@
 #ifndef _RTC_RTCEVENT_H_
 #define _RTC_RTCEVENT_H_
 
+#include <Utils/Debug/Debug.h>
 #include <Utils/Handler.h>
 #include <Utils/RTC/RTC.h>
-#include <Utils/Debug/Debug.h>
 
 namespace RTOS {
 

@@ -6,8 +6,8 @@
  */
 
 
-#include <Utils/TimeKeeper/SystemTick.h>
 #include <Kernel/Kernel.h>
+#include <Utils/TimeKeeper/SystemTick.h>
 
 
 SystemTick::Tick SystemTick::_tickCounter = 0;

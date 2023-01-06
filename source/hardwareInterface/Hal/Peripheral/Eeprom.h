@@ -9,10 +9,9 @@
 #define _HAL_PERIPHERAL_EEPROM_H_
 
 
-#include <RTOS.h>
-
 #include <Drivers/Peripheral/Eeprom.h>
 #include <MemoryManagement/MemoryValue.h>
+#include <RTOS.h>
 
 namespace HAL
 {

@@ -28,12 +28,10 @@
 #ifndef RTOS_SOURCE_CORE_MEMORYMANAGEMENT_UFAT_H_
 #define RTOS_SOURCE_CORE_MEMORYMANAGEMENT_UFAT_H_
 
+#include <MemoryManagement/MemoryValue.h>
 #include <RTOS.h>
-
-#include STRING_INCLUDE
-
 #include <string.h>
-#include "MemoryValue.h"
+
 
 namespace RTOS
 {

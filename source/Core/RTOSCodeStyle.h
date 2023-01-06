@@ -16,6 +16,8 @@ typedef unsigned char uint8;
 
 typedef unsigned short uint16;
 
+typedef short sint16;
+
 typedef unsigned long int uint32;
 
 #define ARRAY_LENGHT(array) (sizeof(array)/sizeof(array[0]))

@@ -19,6 +19,7 @@
 class Timer : public TickTimer
 {
 public:
+	typedef uint32 Seconds;
 	typedef uint32 Microseconds;
 	typedef uint32 Miliseconds;
 
@@ -27,12 +28,12 @@ private:
 
 	static constexpr uint32 MicrosecondsInATick = MicrosecondsResolution/TickFrequency;
 
-	SystemTick::Tick convertMicrosecondsInTick(Microseconds microseconds) const
+	static SystemTick::Tick convertMicrosecondsInTick(Microseconds microseconds)
 	{
 		return microseconds/MicrosecondsInATick;
 	}
 
-	Microseconds convertTickInMicroseconds(SystemTick::Tick tick) const
+	static Microseconds convertTickInMicroseconds(SystemTick::Tick tick)
 	{
 		return tick*MicrosecondsInATick;
 	}
@@ -80,6 +81,17 @@ public:
 		return miliseconds*1000;
 	}
 
+	/*
+	 * @brief Static Function to convert Seconds in Microseconds
+	 *
+	 * @param The value to be converted in seconds
+	 *
+	 * @return The converted value of the parameter in microseconds
+	 */
+	static constexpr Miliseconds convertSecondsInMicroseconds(Seconds seconds)
+	{
+		return seconds*1000000;
+	}
 };
 
 

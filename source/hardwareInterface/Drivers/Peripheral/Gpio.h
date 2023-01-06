@@ -5,9 +5,8 @@
 #ifndef _DRIVER_GPIO_CPP
 #define _DRIVER_GPIO_CPP
 
-#include <RTOSCodeStyle.h>
-
 #include <Hal/Peripheral/GpioDefs.h>
+#include <RTOSCodeStyle.h>
 
 namespace DRIVERS
 {

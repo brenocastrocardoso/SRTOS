@@ -7,10 +7,9 @@
  *      Author: breno
  */
 
-#include <NetworkManagement/CommunicationProtocol.h>
-
 #include <Kernel/Traits.h>
 #include <MemoryManagement/StaticCircularQueue.h>
+#include <NetworkManagement/CommunicationProtocol.h>
 #include <NetworkManagement/CommunicationProtocol_PLink.h>
 #include <RTOSCodeStyle.h>
 #include <Utils/Debug/Debug.h>

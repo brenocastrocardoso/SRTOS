@@ -9,9 +9,10 @@
 #define _DRIVERS_PERIPHERAL_EEPROM_H_
 
 
-#include <RTOS.h>
 #include <Arduino.h>
-#include <EEPROM.h>
+
+#include <Drivers/Peripheral/Eeprom.h>
+#include <RTOS.h>
 
 namespace DRIVERS
 {
@@ -36,12 +37,12 @@ namespace DRIVERS
 
 		void write(MemoryAddress address, uint8 value)
 		{
-			EEPROM[address] = value;
+//			EEPROM[address] = value;
 		}
 
 		uint8 read(MemoryAddress address)
 		{
-			return EEPROM[address];
+//			return EEPROM[address];
 		}
 
 	};

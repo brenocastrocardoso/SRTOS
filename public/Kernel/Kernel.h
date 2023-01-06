@@ -8,12 +8,12 @@
 #ifndef _KERNEL_H
 #define _KERNEL_H
 
+#include <Hal/Peripheral/Eeprom.h>
+#include <Hal/Peripheral/Serial.h>
+#include <IO/IOStream.h>
+#include <IO/StdOIStream.h>
 #include <Kernel/Scheduller/Scheduller.h>
 #include <Kernel/Thread.h>
-#include <IO/IOstream.h>
-#include <IO/StdOIStream.h>
-#include <Hal/Peripheral/Serial.h>
-#include <Hal/Peripheral/Eeprom.h>
 #include <MemoryManagement/uFAT.h>
 
 namespace RTOS
@@ -47,8 +47,8 @@ namespace RTOS
 		typedef RTOS::uFAT<HAL::EEprom> KernelEEprom;
 	private:
 		Scheduller _scheduller;
-		Thread<200> _idleThread;
-		Thread<200> _appThread;
+		Thread<400> _idleThread;
+		Thread<5000> _appThread;
 
 		static bool bootUpCompleted;
 

@@ -5,11 +5,10 @@
  *      Author: breno
  */
 
-#include <RTOSCodeStyle.h>
 #include <NetworkManagement/CommandProtocol.h>
-
 #include <NetworkManagement/CommandProtocol_PLink.h>
 #include <NetworkManagement/CommunicationProtocol.h>
+#include <RTOSCodeStyle.h>
 #include <Utils/Debug/Debug.h>
 
 const CommandProtocol::COMMAND_HANDLER_HOOK CommandProtocol::OBJECT_COMMAND_HANDLER_LIST[] = OBJECT_COMMAND_PROTOCOL_HANDLER_LIST;

@@ -20,7 +20,7 @@ namespace RTOS {
 			_hanlderPointer = ptr;
 		}
 
-		void operator()()
+		virtual void operator()()
 		{
 			_hanlderPointer();
 		}
@@ -28,6 +28,69 @@ namespace RTOS {
 
 		FuncHandler _hanlderPointer;
 	};
+
+	
+	// class Function_Handler: public Handler
+	// {
+	// public:
+	// 	Function_Handler(Function * h): _handler(h) {}
+	// 	~Function_Handler() {}
+
+	// 	void operator()() { _handler(); }
+
+	// private:
+	// 	Function * _handler;
+	// };
+
+	// template<typename T>
+	class Functor
+	{
+	public:
+		typedef void (Functor_Handler)(void *);
+
+		Functor(Functor_Handler h, void* p): _handler(h), _ptr(p) {}
+
+		void operator()() { _handler(_ptr); }
+
+	private:
+		Functor_Handler * _handler;
+		void * _ptr;
+	};
+
+
+	// template <class T>
+	// class FunctorEngine : public Handler {
+	// 	private:
+	// 	T* _object;
+	// 	public:
+	// 	FunctorEngine(FuncHandler ptr, T object) : Handler(ptr), _object(object) {
+
+	// 	}
+
+	// 	virtual void operator()()
+	// 	{
+	// 		_object->_hanlderPointer();
+	// 	}
+
+	// };
+
+	// 	template <class T>
+	// class Functor: public Handler
+	// {
+	// 	private:
+	// 		Handler* _object;
+	// 	public:
+	// 	Functor(FuncHandler ptr, T object) {
+	// 		_object = FunctorEngine<T>(ptr, object)
+	// 	}
+
+	// 	virtual void operator()()
+	// 	{
+	// 		_object();
+	// 	}		
+
+	// }
+	
 
 }
 

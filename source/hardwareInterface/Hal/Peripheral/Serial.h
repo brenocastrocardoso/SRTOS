@@ -8,12 +8,13 @@
 #ifndef RTOS_SOURCE_HARDWAREINTERFACE_DRIVERS_PERIPHERAL_SERIAL_H_
 #define RTOS_SOURCE_HARDWAREINTERFACE_DRIVERS_PERIPHERAL_SERIAL_H_
 
-#include <RTOS.h>
-
 #include <Drivers/Peripheral/Serial.h>
-#include <IO/OStreamEngine.h>
-#include <Utils/Buffer.h>
 #include <Hal/Peripheral/SerialDefs.h>
+#include <IO/OStreamEngine.h>
+#include <RTOS.h>
+#include <Utils/Buffer.h>
+#include <Kernel/Traits.h>
+
 #include STRING_INCLUDE
 
 namespace HAL

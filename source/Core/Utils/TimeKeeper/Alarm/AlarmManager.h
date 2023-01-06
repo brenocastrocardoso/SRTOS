@@ -8,8 +8,8 @@
 #ifndef ALARMMANAGER_H_
 #define ALARMMANAGER_H_
 
-#include <MemoryManagement/StaticAllocator.h>
 #include <MemoryManagement/list.h>
+#include <MemoryManagement/StaticAllocator.h>
 #include <Utils/Debug/Debug.h>
 #include <Utils/TimeKeeper/Alarm.h>
 

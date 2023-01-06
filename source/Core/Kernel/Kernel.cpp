@@ -50,9 +50,11 @@ void Kernel::KernelSystickHandler(void)
 {
 	if (Kernel::bootUpCompleted)
 	{
-		static Timer alarmCheckTimer(1000);
+
+		static Timer alarmCheckTimer(10000);
 		if (alarmCheckTimer.getState() == Timer::TIMER_DONE)
 		{
+			hdebug << ".";
 			alarmCheckTimer.restart();
 			AlarmManager::AlarmManagerHandler();
 		}
@@ -84,6 +86,12 @@ Kernel::Kernel() :
     _idleThread.start();
 	_appThread.start();
 
-	cout << "Kernel Start" << STREAM::endl;
+	cout << STREAM::endl;
+	cout << STREAM::endl;
+	cout << "#################################" << STREAM::endl;
+	cout << "#######   SRTOS STARTED   #######" << STREAM::endl;
+	cout << "#################################" << STREAM::endl;
+	cout << STREAM::endl;
+	cout << STREAM::endl;
 }
 

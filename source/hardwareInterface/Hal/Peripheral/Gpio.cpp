@@ -8,8 +8,8 @@
 #ifndef RTOS_SOURCE_DRIVERS_GPIO_CPP_
 #define RTOS_SOURCE_DRIVERS_GPIO_CPP_
 
-#include <IO/Gpio.h>
 #include <Hal/Peripheral/Gpio.h>
+#include <IO/Gpio.h>
 
 using namespace HAL;
 

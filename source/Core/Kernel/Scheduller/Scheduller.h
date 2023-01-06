@@ -5,13 +5,14 @@
 #ifndef _SCHEDULLER_H
 #define _SCHEDULLER_H
 
-#include <Hal/Archtecture/SchedullerHardwareInterface.h>
 #include <HardwareSerial.h>
+#include <Arduino.h>
+#include <Hal/Archtecture/SchedullerHardwareInterface.h>
 #include <Kernel/Scheduller/SchedullerPolicy.h>
 #include <Kernel/Thread.h>
-#include <MemoryManagement/list.h>
 #include <Kernel/Traits.h>
-#include <Arduino.h>
+#include <MemoryManagement/list.h>
+
 
 extern volatile HAL::SchedullerHardwareInterface::TCB * volatile pxCurrentTCB;
 
@@ -34,6 +35,7 @@ public:
 		if (_reschedulleTimer.getState() == Timer::TIMER_DONE)
 		{
 			_reschedulleTimer.restart();
+//			Serial.println("reschedulle");
 			reschedulle();
 		}
 	}
@@ -51,11 +53,13 @@ public:
 			contextSwitch(next);
 			if(_currentThread->checkStackOverflow())
 			{
+				//TODO FIX THAT
 				_currentThread->info();
 				_currentThread->stackInfo();
 				Serial.println("WARNING");
 			}
 			_currentThread->_state = ThreadEngine::RUNNING;
+
 			applicationSpace();
 		}
 	}
@@ -92,6 +96,7 @@ public:
 		++iterator;
 		Serial.println((unsigned long)(*iterator)->getStackPointer(), HEX);
 		pxCurrentTCB = (void**)_currentThread->getStackPointer();
+
 		HAL::SchedullerHardwareInterface::startScheduler();
 	}
 

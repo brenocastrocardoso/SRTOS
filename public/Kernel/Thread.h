@@ -44,10 +44,7 @@ public:
 
 	void join();
 
-	void resume()
-	{
-		_state = WAITING;
-	}
+	void resume();
 
 	void info();
 

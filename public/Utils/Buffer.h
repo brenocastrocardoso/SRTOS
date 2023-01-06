@@ -9,7 +9,6 @@
 #define RTOS_PUBLIC_UTILS_BUFFER_H_
 
 #include <RTOS.h>
-
 #include CSTRING_INCLUDE
 
 namespace RTOS

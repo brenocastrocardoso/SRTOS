@@ -10,6 +10,7 @@
 #include <Kernel/Kernel.h>
 #include <Kernel/Scheduller/Scheduller.h>
 #include <Kernel/Thread.h>
+#include <Utils/Debug/Debug.h>
 
 /**
  * Thread implementation
@@ -32,9 +33,16 @@ ThreadEngine& ThreadEngine::getCurrent(void)
 
 void ThreadEngine::wakeUp(void* threadParam)
 {
+	hdebug << F("ThreadEngine::wakeUp") << DEBUG::endl;
+
 	Interrupt::AtomicFunction atomic;
 	ThreadEngine* threadToWake = (ThreadEngine*)threadParam;
 	threadToWake->resume();
+}
+
+void ThreadEngine::resume()
+{
+	_state = WAITING;
 }
 
 

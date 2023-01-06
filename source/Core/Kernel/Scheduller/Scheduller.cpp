@@ -3,8 +3,8 @@
  */
 
 
-#include <Kernel/Scheduller/Scheduller.h>
 #include <Hal/Archtecture/SchedullerHardwareInterface.h>
+#include <Kernel/Scheduller/Scheduller.h>
 
 /**
  * Scheduller implementation

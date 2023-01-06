@@ -8,7 +8,7 @@
 #ifndef SYSTEM_COMMUNICATIONPROTOCOL_PLINK_H_
 #define SYSTEM_COMMUNICATIONPROTOCOL_PLINK_H_
 
-#include "../../public/NetworkManagement/CommandProtocol.h"
+#include <NetworkManagement/CommandProtocol.h>
 
 //TODO MAKE IT POSSIBLE TO HAVE MORE THAN ONE LIST
 #define COMMUNICATION_PROTOCOL_MESSAGE_HANDLER_LIST 												\

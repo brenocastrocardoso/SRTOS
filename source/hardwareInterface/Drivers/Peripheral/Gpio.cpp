@@ -5,11 +5,10 @@
 #ifndef _DRIVER_GPIO_H
 #define _DRIVER_GPIO_H
 
-#include <RTOSCodeStyle.h>
-
-#include <Hal/Peripheral/GpioDefs.h>
-#include "Gpio.h"
 #include <Arduino.h>
+#include <Drivers/Peripheral/Gpio.h>
+#include <Hal/Peripheral/GpioDefs.h>
+#include <RTOSCodeStyle.h>
 
 using namespace DRIVERS;
 

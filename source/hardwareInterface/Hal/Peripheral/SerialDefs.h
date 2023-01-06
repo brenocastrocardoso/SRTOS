@@ -8,10 +8,9 @@
 #ifndef _SERIALDEFS_H_
 #define _SERIALDEFS_H_
 
-#include <RTOS.h>
-
 #include <Drivers/Peripheral/Serial.h>
 #include <IO/OStreamEngine.h>
+#include <RTOS.h>
 #include <Utils/Buffer.h>
 
 namespace HAL

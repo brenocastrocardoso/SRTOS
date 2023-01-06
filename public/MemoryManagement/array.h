@@ -69,6 +69,6 @@ private:
   size_t size_;
 };
 
-#include "ArrayDefinitions.h"
+#include <MemoryManagement/arrayDefinitions.h>
 
 #endif

@@ -8,8 +8,8 @@
 #ifndef RTOS_PUBLIC_UTILS_RTC_RTC_H_
 #define RTOS_PUBLIC_UTILS_RTC_RTC_H_
 
-#include "DateTime.h"
 #include <Kernel/PeriodicThread.h>
+#include <Utils/RTC/DateTime.h>
 
 class RealTimeClock
 {
@@ -29,7 +29,11 @@ public:
 
     static void RealTimeClockHandler(void* obj)
     {
-        ++(((RealTimeClock*)obj)->_time);
+    	while(1)
+    	{
+			++(((RealTimeClock*)obj)->_time);
+			RTOS::PeriodicThread::waitNext();
+    	}
     }
 
     Timepoint getTime()

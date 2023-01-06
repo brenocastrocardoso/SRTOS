@@ -6,10 +6,10 @@
  */
 
 
-#include <Utils/TimeKeeper/Alarm.h>
-#include <MemoryManagement/StaticAllocator.h>
 #include <MemoryManagement/list.h>
+#include <MemoryManagement/StaticAllocator.h>
 #include <Utils/TimeKeeper/Alarm/AlarmManager.h>
+#include <Utils/TimeKeeper/Alarm.h>
 
 
 RTOS::list<Alarm, StaticAllocator<Alarm, AlarmManager::MAXIMUM_ALARMS>> AlarmManager::_alarmQueue;

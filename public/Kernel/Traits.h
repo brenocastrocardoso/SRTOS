@@ -71,7 +71,7 @@ template<> struct Traits<T_TIME>
 		TIMER_MILLIS,
 	};
 	static const int TimerEngine = TIMER_SYSTICK;
-	static const int TickFrequency = 10000;
+	static const int TickFrequency = 1000;
 };
 
 template<> struct Traits<T_NETWORK>
